@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int main() {
+	int i, j, n, m, nbdi, nbdach;
+
+	printf("donnez le nombre des lignes :");
+	do {
+		scanf("%d", &n);
+	} while (n % 2 == 0);
+	m = n * 3;
+	nbdi = 1;
+
+
+	for (i = 0; i < n / 2; i++) {
+		nbdach = (m- nbdi*3) / 2 ;
+
+		for (j = 0; j < nbdach ; j++) {
+			printf("-");
+		}
+
+		for (j = 0; j < nbdi; j++) {
+			printf(".|.");
+		}
+		for (j = 0; j < nbdach; j++) {
+			printf("-");
+		}
+		printf("\n");
+		nbdi = nbdi + 2;
+
+	}
+	for(j=0;j<(m/2-3);j++){
+	printf("-");}
+	printf("welcome");
+	for(j=(m/2)+4;j<m;j++){
+		printf("-");}
+	printf("\n");
+
+
+			nbdi = nbdi - 2;
+	for (i = 0; i < n / 2; i++) {
+		nbdach = (m-nbdi*3) / 2 ;
+
+		for (j = 0; j < nbdach ; j++) {
+			printf("-");
+		}
+
+		for (j = 0; j < nbdi; j++) {
+			printf(".|.");
+		}
+		for (j = 0; j < nbdach; j++) {
+			printf("-");
+		}
+		printf("\n");
+		nbdi = nbdi - 2;}
+
+
+
+	return 0;
+}
